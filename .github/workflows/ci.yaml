@@ -154,9 +154,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
       - name: Snyk Authenticate
-        run: SNYK_TOKEN=<SNYK_API_TOKEN> snyk test
-        run: snyk auth <SNYK_API_TOKEN>
-        run: snyk auth ${{ secrets.SNYK_TOKEN }}
+        run: SNYK_TOKEN=<SNYK_API_TOKEN> snyk test snyk auth <SNYK_API_TOKEN> snyk auth ${{ secrets.SNYK_TOKEN }}
 
       - name: Snyk Code Test
         run: snyk code test --all-projects
