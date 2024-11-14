@@ -1,8 +1,6 @@
 name: React.js CI
 
 on:
-push_request:
-    branches: "master"
   pull_request:
     branches: "master"
 
