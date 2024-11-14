@@ -189,6 +189,9 @@ jobs:
       uses: snyk/actions/setup@master
       with:
         snyk-token: ${{ secrets.SNYK_TOKEN }}
+
+    name: Snyk Test 
+      run: snyk test ${{ secrets.SNYK_TOKEN }}    
        
     - name: Snyk Authenticate    
       run: snyk auth ${{ secrets.SNYK_TOKEN }}
