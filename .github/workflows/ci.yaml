@@ -191,7 +191,7 @@ jobs:
         snyk-token: ${{ secrets.SNYK_TOKEN }}
        
     - name: Snyk Authenticate    
-      run: snyk auth ${{ secrets.SNYK_TOKEN }}
+      run: snyk auth --auth-type=token ${{ secrets.SNYK_TOKEN }}
   
     - name: Snyk Container monitor
       run: snyk container monitor ${{ secrets.DOCKER_USERNAME }}/frontend-js --file=Dockerfile   
